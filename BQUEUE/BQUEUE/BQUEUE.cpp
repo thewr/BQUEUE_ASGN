@@ -26,7 +26,7 @@ BQUEUE::BQUEUE(const BQUEUE & B)
 {
 	//if (Empty())
 	//{
-	//	front = back = new Qnode;
+		front = back = new bqnode;
 	//	front->data = item;
 	//}
 	//else
