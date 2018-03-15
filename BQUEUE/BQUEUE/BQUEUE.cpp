@@ -40,19 +40,20 @@ BQUEUE::BQUEUE(const BQUEUE & B)
 
 void BQUEUE::Enqueue(int) 
 {
-	//if (Empty())
-	//{
-	//	front = back = new bqnode;
-	//	front->data = item;
-	//}
-	//else
-	//{ 
-	//	back->next = new bqnode;
-	front->prev->next = new bqnode;
-	//	back->next->prev = back;
-	//	back = back->next;
-	//	back->data = item;
-	//}
+	if (Empty())
+	{
+	front = new bqnode; //front = back = new bqnode;
+	front->next = front;
+	front->prev = front;
+	front->data = item; //front->data = item;
+	}
+	else
+	{ 
+	front->prev->next = new bqnode;  //back->next = new bqnode;
+	front->prev->next->prev = front->prev; //back->next->prev = back;
+	front->prev=front->prev->next; //back = back->next;
+	front->prev->data=item;  //back->data = item;
+	}
 }
 
 void BQUEUE::Dequeue() 
