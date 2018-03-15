@@ -58,21 +58,20 @@ void BQUEUE::Enqueue(int)
 
 void BQUEUE::Dequeue() 
 {
-	//if (!Empty())
-	//{
-	//	bqnode *p = front;
-	//	front = front->next;
-	//	if (front != 0)
-	//		front->prev = 0;
-	//	else
-	//		back = 0;
-
-	//	delete p;
-	//}
-	//else
-	//{
-	//	cout << "Cannot Dequeue because queue is empty\n";
-	//}
+	if (!Empty())
+	{
+		bqnode *p = front;
+		front = front->next;
+		if (front != 0)
+			front->prev = 0;
+		else
+			front->prev = 0; //back = 0;
+		delete p;
+	}
+	else
+	{
+		cout << "Cannot Dequeue because queue is empty\n";
+	}
 }
 
 void BQUEUE::Print()
