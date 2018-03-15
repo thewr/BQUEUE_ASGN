@@ -26,7 +26,7 @@ BQUEUE::BQUEUE(const BQUEUE & B)
 {
 	//if (Empty())
 	//{
-		front = back = new bqnode;
+	//	front = back = new bqnode;
 	//	front->data = item;
 	//}
 	//else
@@ -70,7 +70,7 @@ void BQUEUE::Dequeue()
 	//}
 	//else
 	//{
-	//	cout << "Cannot deQueue because queue is empty\n";
+	//	cout << "Cannot Dequeue because queue is empty\n";
 	//}
 }
 
